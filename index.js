@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
 });
 
 app.use(routes);
